@@ -11,7 +11,7 @@ def index():
 
 @app.route('/contato')
 def contato():
-  return "manases.gilson@aluno.ifsertao-pe.edu.br"
+  return "contato.html", tel= "(87)999999999", nome="joao"
 
 
 if __name__ == '__main__':
