@@ -11,9 +11,12 @@ def index():
 
 @app.route('/contato')
 def contato():
-  return "contato.html", tel= "(87)999999999", nome="joao"
+   return render_template("contato.html", tel="(81) 988889898", nome="Joao")
 
-    return render_template("contato.html", tel="(81) 988889898", nome="Joao")
+@app.route('/sobre')
+def sobre():
+    return  render_template("sobre.html")
+
 
 @app.route("/user/<nome>", defaults={"sobrenome": "Silva"})
 @app.route("/user/<nome>/<sobrenome>")
@@ -26,9 +29,6 @@ def soma(num1, num2):
     return f"O resultado da soma é: {num1 + num2}"
 
 # Minha página pessoal
-@app.route("/sobre")
-def sobre():
-    return render_template("sobre.html")
 
 if __name__ == '__main__':
     app.run()
